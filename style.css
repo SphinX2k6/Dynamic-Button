@@ -11,30 +11,18 @@ html, body {
 body {
   display: grid;
   place-items: center;
-  background: #131419;
-}
-
-body,
-html {
-  height: 100%;
-}
-
-body {
-  margin: 0;
-  padding: 0;
   font-family: "Outfit";
-  background-image: url('https://i.pinimg.com/originals/b8/ce/56/b8ce561f6cd4566c778be16adbc114dd.gif');
-  background-size: 100% 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background: url('https://i.pinimg.com/originals/b8/ce/56/b8ce561f6cd4566c778be16adbc114dd.gif') no-repeat center center fixed;
+  background-size: cover;
+  margin: 0;
 }
 
 main.code {
   border-radius: 1em;
-  background-color: #141414;
+  background-color: rgba(20, 20, 20, 0.8);
   width: 21em;
   height: 28em;
+  padding: 1em;
 }
 
 div.card {
@@ -69,10 +57,63 @@ p.legend {
   margin-top: 0.1em;
 }
 
-footer {
-  text-align: left;
-  position: fixed;
-  left: 30px;
-  padding: 3px;
-  color: white;
+/* Style for the "Add Server" button */
+button.add-server-button {
+  margin-top: 1.5em;
+  padding: 0.8em 2em;
+  font-size: 1em;
+  color: #fff;
+  background-color: #3498db;
+  border: none;
+  border-radius: 0.3em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button.add-server-button:hover {
+  background-color: #2980b9;
+}
+
+/* Style for the Server Address box */
+.server-info-box {
+  background-color: #2c3e50;
+  padding: 10px;
+  border-radius: 0.5em;
+  margin-top: 1em;
+  text-align: center;
+}
+
+.server-address-label {
+  color: #ecf0f1;
+  font-weight: 700;
+  margin-bottom: 0.5em;
+}
+
+.server-address {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.server-address code {
+  background-color: #34495e;
+  color: #ecf0f1;
+  padding: 0.5em;
+  border-radius: 0.3em;
+  margin-right: 0.5em;
+}
+
+.copy-button {
+  padding: 0.5em 1em;
+  font-size: 0.9em;
+  color: #fff;
+  background-color: #2ecc71;
+  border: none;
+  border-radius: 0.3em;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.copy-button:hover {
+  background-color: #27ae60;
 }
