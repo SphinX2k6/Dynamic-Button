@@ -117,3 +117,13 @@ button.add-server-button:hover {
 .copy-button:hover {
   background-color: #27ae60;
 }
+
+#qr-code {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
