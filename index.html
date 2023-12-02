@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Scan the QR code to connect with WhatsApp multi-device">
+  <meta name="description" content="MIST">
   <link rel="shortcut icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScEKBOMbraZoxNY9YvIF7Kvcz4NDNriKCnQSN6yyjWmQ&usqp=CAU&ec=48600113" type="image/x-icon">
-  <title>QR Code</title>
+  <title>Mist Dragon Server</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
@@ -17,22 +17,45 @@
     <div class="card">
       <div id="loading" class="loading-spinner"></div>
       <img id="qr-code" class="code_1" alt="QR-BY-ARISENPAI" title="Scan the QR code to connect with WhatsApp multi-device">
-      <h1 class="title">Session ID FOR ANY WA BOT</h1>
-      <p class="legend">Scan QR within 30 seconds</p>
+      <h1 class="title">Mist Dragon Java & Bedrock IP</h1>
+      <p class="legend">Note: Bedrock players just click on the button, to add server</p>
       <p class="legend">Author: UnderTaker</p>
+       <!-- Creative box for the Server Address -->
+      <div class="server-info-box">
+        <p class="server-address-label">Server Address:</p>
+        <div class="server-address">
+          <code>node-eu.poggerhost.cloud:25616</code>
+          <button class="copy-button" onclick="copyToClipboard()">Copy</button>
+        </div>
+      </div>
+      <!-- Added "Add Server" button -->
+      <button class="add-server-button" onclick="openServerURL()">Add Server</button>
     </div>
-    <footer>
-      <p>All Rights Reserved: Team Infinity</p>
-      <p><a href="https://github.com/AshAritra/">Github</a></p>
-    </footer>
   </main>
+  
+  <footer>
+    <p>All Rights Reserved: Team Infinity</p>
+    <p><a href="https://github.com/AshAritra/">Github</a></p>
+  </footer>
+ 
+  <!-- JavaScript for copying to clipboard -->
+  <script>
+    function copyToClipboard() {
+      var serverAddress = document.querySelector('.server-address code');
+      var textarea = document.createElement('textarea');
+      textarea.value = serverAddress.textContent;
+      document.body.appendChild(textarea);
+      textarea.select();
+      document.execCommand('copy');
+      document.body.removeChild(textarea);
+      alert('Server address copied to clipboard!');
+    }
+  </script>
+  <script>
+  function openServerURL() {
+    var serverURL = 'https://node-eu.poggerhost.cloud:25616'; // Change this to your server URL
+    window.open(serverURL, '_blank');
+  }
+</script>
 </body>
 </html>
-<script>
-  function updateQRCode() {
-    const qrCodeImg = document.getElementById("qr-code");
-    qrCodeImg.src = "https://marin-152-qr.aritramondal6.repl.co/qr?timestamp=" + Date.now();
-  }
-  updateQRCode();
-  setInterval(updateQRCode, 10000);
-</script>
