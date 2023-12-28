@@ -58,8 +58,15 @@ p.legend {
 }
 
 /* Style for the "Add Server" button */
-button.add-server-button {
+.button-container {
+  display: flex;
+  justify-content: space-between;
   margin-top: 1.5em;
+}
+
+.add-server-button {
+  flex: 1;
+  margin-right: 0.5em;
   padding: 0.8em 2em;
   font-size: 1em;
   color: #fff;
@@ -70,7 +77,7 @@ button.add-server-button {
   transition: background-color 0.3s;
 }
 
-button.add-server-button:hover {
+.add-server-button:hover {
   background-color: #2980b9;
 }
 
@@ -119,11 +126,5 @@ button.add-server-button:hover {
 }
 
 #qr-code {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline: 0;
-    font-size: 100%;
-    vertical-align: baseline;
+  font-size: 100%; /* You can remove the rest as they are reset by the universal selector */
 }
-
