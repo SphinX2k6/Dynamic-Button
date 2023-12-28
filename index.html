@@ -16,18 +16,24 @@
   <main class="code">
     <div class="card"> 
       <h1 class="title">Mist Dragon Java & Bedrock IP</h1>
-      <p class="legend">Note: Bedrock players just click on the button, to add server</p>
+      <p class="legend">Note: Bedrock players just click on the button to add the server</p>
       <p class="legend">Author: UnderTaker</p>
        <!-- Creative box for the Server Address -->
       <div class="server-info-box">
-        <p class="server-address-label">Server Address:</p>
+        <p class="server-address-label">Mist Dragon Server:</p>
         <div class="server-address">
-          <code>free-de1.zeonnodes.biz.id:3019</code>
-          <button class="copy-button" onclick="copyToClipboard()">Copy</button>
+          <code id="serverAddress1">free-de1.zeonnodes.biz.id:3019</code>
+          <button class="copy-button" onclick="copyToClipboard('serverAddress1')">Copy</button>
+        </div>
+        <p class="server-address-label">Mist Dragon Creative Server:</p>
+        <div class="server-address2">
+          <code id="serverAddress2">mistcrtv.uk.to:25834</code>
+          <button class="copy-button" onclick="copyToClipboard('serverAddress2')">Copy</button>
         </div>
       </div>
       <!-- Added "Add Server" button -->
-      <button class="add-server-button" onclick="openServerURL()">Add Server</button>
+      <button class="add-server-button" onclick="openServerURL()">Add Survival Server</button>
+      <button class="add-server-button" onclick="openServerURL2()">Add Creative Server</button>
     </div>
   </main>
   
@@ -38,8 +44,8 @@
  
   <!-- JavaScript for copying to clipboard -->
   <script>
-    function copyToClipboard() {
-      var serverAddress = document.querySelector('.server-address code');
+    function copyToClipboard(serverId) {
+      var serverAddress = document.getElementById(serverId);
       var textarea = document.createElement('textarea');
       textarea.value = serverAddress.textContent;
       document.body.appendChild(textarea);
@@ -50,10 +56,14 @@
     }
   </script>
   <script>
-  function openServerURL() {
-    var serverURL = 'minecraft://?addExternalServer=Mist Dragon Server|free-de1.zeonnodes.biz.id:3019'; // Change this to your server URL
-    window.open(serverURL, '_blank');
-  }
-</script>
+    function openServerURL() {
+      var serverURL = 'minecraft://?addExternalServer=Mist Dragon Server|free-de1.zeonnodes.biz.id:3019'; // Change this to your server URL
+      window.open(serverURL, '_blank');
+    }
+    function openServerURL2() {
+      var serverURL = 'minecraft://?addExternalServer=Mist Dragon Server|mistcrtv.uk.to:25834'; // Change this to your server URL
+      window.open(serverURL, '_blank');
+    }
+  </script>
 </body>
 </html>
