@@ -60,13 +60,11 @@ p.legend {
 /* Style for the "Add Server" button */
 .button-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center; /* Change to center to match HTML structure */
   margin-top: 1.5em;
 }
 
 .add-server-button {
-  flex: 1;
-  margin-right: 0.5em;
   padding: 0.8em 2em;
   font-size: 1em;
   color: #fff;
